@@ -1,0 +1,156 @@
+@import "./globals";
+
+$colors: (
+  nav-textcolor: #00000080,
+  textcolor: #555,
+  footer: #333333,
+);
+
+*,
+body {
+  background-color: #e0e0e0;
+}
+
+.h1 {
+  font-weight: bold;
+  font-size: 40px;
+  color: map-get($map: $colors, $key: nav-textcolor);
+}
+
+.p {
+  font-size: 1.6em;
+  color: map-get($map: $colors, $key: nav-textcolor);
+  font-weight: 500;
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.pageWrapper {
+  .nav {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .logoText {
+      text-decoration: none;
+      color: map-get($map: $colors, $key: nav-textcolor);
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    .navMenu {
+      display: flex;
+      align-items: center;
+      .menuText {
+        color: map-get($map: $colors, $key: nav-textcolor);
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-inline: 0.5em;
+      }
+    }
+
+    .navlinkbtn-active {
+      background-color: #e0e0e0;
+      box-shadow: 1.2em 1.2em 2.4em 0 rgba(0, 0, 0, 0.2),
+        -1.2em -1.2em 2.4em 0 rgba(255, 255, 255, 0.5);
+      border-radius: 3em;
+      color: map-get($map: $colors, $key: transparent-color);
+      padding: 10px;
+    }
+  }
+
+  .pageBody {
+    .cardcontainer {
+      display: flex;
+      background-color: #e0e0e0;
+      padding: 1em;
+      border-radius: 3em;
+      border: solid 2px transparent;
+      box-shadow: 1.2em 1.2em 2.4em 0 rgba(0, 0, 0, 0.2),
+        -1.2em -1.2em 2.4em 0 rgba(255, 255, 255, 0.5);
+      width: max-content;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+
+      .info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1em;
+        .info-sub-container {
+          padding: 0.2em;
+          .link-icon {
+            color: #00000050;
+            text-decoration: none;
+            font-size: 2em;
+          }
+          .link-icon:hover {
+            color: #777;
+          }
+          .link-icon:active {
+            color: #00000020;
+          }
+        }
+      }
+
+      .dp {
+        border-radius: 150px;
+
+        height: 25em;
+        width: 25em;
+      }
+
+      .card {
+        background-color: #e0e0e0;
+        box-shadow: inset 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+          inset -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+        padding: 2em;
+        border-radius: 25em;
+        border: solid 2px transparent;
+      }
+
+      .page-btn {
+        text-decoration: none;
+        background-color: map-get($map: $colors, $key: transparent-color-dark);
+        font-weight: 600;
+        color: #00000070;
+        backdrop-filter: blur(20px);
+        padding: 1em;
+        border-radius: 10em;
+        border: solid 2px transparent;
+        box-shadow: 10px 10px 10px rgba(46, 54, 58, 0.1);
+      }
+      .page-btn:active {
+        background-color: map-get($map: $colors, $key: transparent-color-dark);
+        color: #00000020;
+      }
+    }
+  }
+}
+
+/*
+
+
+  .container {
+    margin: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+    .subcontainer {
+      flex: 0.5;
+      align-content: center;
+    }
+  }
+
+  
+
+  */
