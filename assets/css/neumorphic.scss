@@ -4,12 +4,9 @@ $colors: (
   nav-textcolor: #00000080,
   textcolor: #555,
   footer: #333333,
+  bar-color: rgba(95, 95, 95, 0.3),
+  bar-text-color: rgba(255, 255, 255, 0.64),
 );
-
-*,
-body {
-  background-color: #e0e0e0;
-}
 
 .h1 {
   font-weight: bold;
@@ -24,6 +21,7 @@ body {
 }
 
 .bg {
+  background-color: #e0e0e0;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -131,6 +129,27 @@ body {
       .page-btn:active {
         background-color: map-get($map: $colors, $key: transparent-color-dark);
         color: #00000020;
+      }
+    }
+
+    .bar-outline {
+      height: 3em;
+      width: 30em;
+      border: 2px solid map-get($map: $colors, $key: bar-color);
+      border-radius: 3em;
+      margin-block: 1em;
+
+      .bar-inline {
+        display: flex;
+        height: 3em;
+        background-color: map-get($map: $colors, $key: bar-color);
+        border-radius: 2em;
+        align-items: center;
+
+        .skill-text {
+          padding-inline: 1em;
+          color: map-get($map: $colors, $key: bar-text-color);
+        }
       }
     }
   }

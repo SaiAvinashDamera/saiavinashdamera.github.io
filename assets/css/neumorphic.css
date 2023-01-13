@@ -10,11 +10,6 @@ body {
        user-select: none; /* Standard syntax */
 }
 
-*,
-body {
-  background-color: #e0e0e0;
-}
-
 .h1 {
   font-weight: bold;
   font-size: 40px;
@@ -28,6 +23,7 @@ body {
 }
 
 .bg {
+  background-color: #e0e0e0;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -122,6 +118,24 @@ body {
 }
 .pageWrapper .pageBody .cardcontainer .page-btn:active {
   color: rgba(0, 0, 0, 0.1254901961);
+}
+.pageWrapper .pageBody .bar-outline {
+  height: 3em;
+  width: 30em;
+  border: 2px solid rgba(95, 95, 95, 0.3);
+  border-radius: 3em;
+  margin-block: 1em;
+}
+.pageWrapper .pageBody .bar-outline .bar-inline {
+  display: flex;
+  height: 3em;
+  background-color: rgba(95, 95, 95, 0.3);
+  border-radius: 2em;
+  align-items: center;
+}
+.pageWrapper .pageBody .bar-outline .bar-inline .skill-text {
+  padding-inline: 1em;
+  color: rgba(255, 255, 255, 0.64);
 }
 
 /*

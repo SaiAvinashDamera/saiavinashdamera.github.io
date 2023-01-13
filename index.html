@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/glassmorphic.css">
-    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="./assets/css/glassmorphic.css">
+    <link rel="stylesheet" href="./assets/css/slider.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script>
+    <script type="text/javascript">
         function flipswitch() {
+            console.log("iwashere button");
             // Get the checkbox
             var checkBox = document.getElementById("themeswitch");
 
@@ -20,10 +21,27 @@
             // If the checkbox is checked, display the output text
             if (checkBox.checked == true) {
                 //neumorphic
-                theme.setAttribute('href', 'assets/css/neumorphic.css');
+                theme.setAttribute('href', './assets/css/neumorphic.css');
             } else {
                 //glassmorphic
-                theme.setAttribute('href', 'assets/css/glassmorphic.css');
+                theme.setAttribute('href', './assets/css/glassmorphic.css');
+            }
+        }
+
+        function BarAnimation() {
+            console.log("iwashere");
+            var elem = document.getElementsByClassName("bar-inline");
+            var targetWidth = elem.style.width;
+            var width = 0;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= targetWidth) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width * 1 + '%';
+                }
             }
         }
     </script>
@@ -31,7 +49,7 @@
     <title>Portfolio | Sai Avinash Damera</title>
 </head>
 
-<body>
+<body onload="javascript:BarAnimation()">
 
     <div class="bg"></div>
     <div class="pageWrapper">
@@ -42,7 +60,7 @@
                 <p class="menuText">Glassmorphism</p>
 
                 <label class="switch">
-                    <input id="themeswitch" type="checkbox" onclick="flipswitch()">
+                    <input id="themeswitch" type="checkbox" onclick="javascript:flipswitch()">
                     <span class="slider round"></span>
                 </label>
 
@@ -52,8 +70,8 @@
         </div>
 
         <div class="pageBody">
-            <p class="sample">hello there this is my Portfolio!</p>
-            <div class="cardcontainer" style="position: fixed; top: 10em; right: 7em;">
+            <!--code for profile container-->
+            <div class="cardcontainer cardZoomAnimation" style="position: fixed; top: 10em; right: 7em;">
                 <div>
                     <div class="card">
                         <image
@@ -88,6 +106,47 @@
                     </div>
                 </div>
             </div>
+
+            <!--code for main body-->
+            <div class="cardcontainer" style="margin: 5em;">
+                <h1 class="h1">My Skills</h1>
+                <div class="skills-container">
+
+                    <div class="bar-outline cardZoomAnimation">
+                        <div class="bar-inline" style="width: 75%;">
+                            <p class="skill-text p">Frontend</p>
+                        </div>
+                    </div>
+
+                    <div class="bar-outline cardZoomAnimation">
+                        <div class="bar-inline" style="width: 65%;">
+                            <p class="skill-text p">SCSS</p>
+                        </div>
+                    </div>
+
+                    <div class="bar-outline cardZoomAnimation">
+                        <div class="bar-inline" style="width: 60%;">
+                            <p class="skill-text p">ReactJS</p>
+                        </div>
+                    </div>
+
+                    <div class="bar-outline cardZoomAnimation">
+                        <div class="bar-inline" style="width: 60%;">
+                            <p class="skill-text p">TailwindCSS</p>
+                        </div>
+                    </div>
+
+                    <div class="bar-outline cardZoomAnimation">
+                        <div class="bar-inline" style="width: 40%;">
+                            <p class="skill-text p">Redux</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 </body>
