@@ -10,6 +10,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="https://kit.fontawesome.com/5ef3b2feae.js" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+
     <script type="text/javascript">
         function flipswitch() {
             console.log("iwashere button");
@@ -54,17 +58,36 @@
     <div class="bg"></div>
     <div class="pageWrapper">
         <div class="nav">
-            <h1 class="logoText">Portfolio</h1>
-            <div class="navMenu">
 
-                <p class="menuText">Glassmorphism</p>
+            <div class="nav-button-container">
+                <div class="nav-button" onclick="onClickNavMenu()">
+                    <div class="nav-icon-close" id="navicon">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                    </div>
+                </div>
+
+
+                <ul id="navmenu" class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <h1 class="logoText">Portfolio</h1>
+            <div class="top-nav-menu">
+
+                <p class="menu-text">Glassmorphism</p>
 
                 <label class="switch">
                     <input id="themeswitch" type="checkbox" onclick="javascript:flipswitch()">
                     <span class="slider round"></span>
                 </label>
 
-                <p class="menuText">Neumorphism</p>
+                <p class="menu-text">Neumorphism</p>
 
             </div>
         </div>
@@ -74,13 +97,11 @@
             <div class="cardcontainer cardZoomAnimation" style="position: fixed; top: 10em; right: 7em;">
                 <div>
                     <div class="card">
-                        <image
-                            src="https://fiverr-res.cloudinary.com/image/upload/t_profile_original,q_auto,f_auto/v1/attachments/profile/photo/e17fe7927d2e111618953dc34f63360f-1597243454772/a9de6756-4d7e-4350-981e-13e497e529a0.jpg"
-                            class="dp" />
+                        <image src="./assets/dp.png" class="dp" />
                     </div>
                 </div>
                 <div>
-                    <div class="h1">Damera Sai Avinash</div>
+                    <div class="h1 text-wave-anim">Damera Sai Avinash</div>
                     <p class="p">Programmer. UI Designer. Digital Artist.</p>
                 </div>
                 <div>
@@ -107,7 +128,7 @@
                 </div>
             </div>
 
-            <!--code for main body-->
+            <!-- code for main body
             <div class="cardcontainer" style="margin: 5em;">
                 <h1 class="h1">My Skills</h1>
                 <div class="skills-container">
@@ -143,7 +164,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div> -->
 
 
 
