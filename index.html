@@ -56,6 +56,7 @@
 <body onload="javascript:BarAnimation()">
 
     <div class="bg"></div>
+    <div class="progress"></div>
     <div class="pageWrapper">
         <div class="nav">
 
@@ -69,7 +70,7 @@
                 </div>
 
 
-                <ul id="navmenu" class="nav-menu">
+                <ul id="navmenu" class="nav-menu cardZoomAnimation">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">About Me</a></li>
@@ -94,7 +95,7 @@
 
         <div class="pageBody">
             <!--code for profile container-->
-            <div class="cardcontainer cardZoomAnimation" style="position: fixed; top: 10em; right: 7em;">
+            <div id="cardContainer" class="cardcontainer cardZoomAnimation card-align">
                 <div>
                     <div class="card">
                         <image src="./assets/dp.png" class="dp" />
