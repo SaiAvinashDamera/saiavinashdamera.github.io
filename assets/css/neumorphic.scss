@@ -60,6 +60,33 @@ $desktop: 1081px;
   }
 }
 
+.workinprogress {
+  position: absolute;
+  display: block;
+  text-align: center;
+  z-index: 901;
+
+  width: 10.2%;
+  height: 44px;
+
+  top: -3em;
+  right: -7em;
+
+  background-color: #00000060;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  padding: 0;
+  text-decoration: none;
+  opacity: 1;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+  line-height: 47px;
+}
+
 .bg {
   background-color: #e0e0e0;
   height: 100%;
@@ -125,60 +152,6 @@ $desktop: 1081px;
       }
     }
 
-    .nav-menu {
-      display: none;
-      transition: 1s ease;
-    }
-
-    .nav-menu li {
-      list-style: none;
-      padding: 0.6em;
-    }
-    .nav-menu li a {
-      padding-block: 0.4em;
-      padding-inline: 1em;
-      font-size: 2em;
-      color: #00000070;
-      text-decoration: none;
-
-      transition: 100ms ease-in;
-
-      @include tab-s {
-        font-size: 3em;
-      }
-    }
-    .nav-menu li a:hover {
-      font-weight: bold;
-      font-size: 3em;
-      box-shadow: inset 12px 12px 24px 0 rgba(255, 255, 255, 0.5),
-        inset -12px -12px 24px 0 rgba(0, 0, 0, 0.2);
-      border-radius: 3em;
-
-      @include tab-s {
-        font-size: 3.6em;
-      }
-    }
-
-    .nav-menu-changed {
-      display: flex;
-      flex-direction: column;
-      border-radius: 2em;
-
-      background-color: #e0e0e0;
-      box-shadow: inset 12px 12px 24px 0 rgba(255, 255, 255, 0.5),
-        inset -12px -12px 24px 0 rgba(0, 0, 0, 0.2);
-
-      z-index: 100;
-      padding: 2em;
-
-      @include tab-s {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
     .logoText {
       margin-left: 1.5em;
       text-decoration: none;
@@ -213,7 +186,64 @@ $desktop: 1081px;
 
     @include tab-s {
       justify-content: center;
+      align-items: center;
     }
+
+    .nav-menu {
+      display: none;
+      transition: 1s ease;
+    }
+
+    .nav-menu li {
+      list-style: none;
+      padding: 0.6em;
+    }
+    .nav-menu li a {
+      padding-block: 0.4em;
+      padding-inline: 1em;
+      font-size: 2em;
+      color: #00000070;
+      text-decoration: none;
+
+      transition: 100ms ease-in;
+
+      @include tab-s {
+        font-size: 3em;
+      }
+    }
+    .nav-menu li a:hover {
+      transition: 340ms ease-out;
+      font-weight: bold;
+      font-size: 2.5em;
+      box-shadow: inset 12px 12px 24px 0 rgba(255, 255, 255, 0.5),
+        inset -12px -12px 24px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 3em;
+
+      @include tab-s {
+        font-size: 3.6em;
+      }
+    }
+
+    .nav-menu-changed {
+      display: flex;
+      flex-direction: column;
+      border-radius: 2em;
+
+      background-color: #e0e0e0;
+      box-shadow: inset 12px 12px 24px 0 rgba(255, 255, 255, 0.5),
+        inset -12px -12px 24px 0 rgba(0, 0, 0, 0.2);
+
+      z-index: 1;
+      padding: 2em;
+
+      @include tab-s {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+    }
+
     .cardcontainer {
       z-index: -1;
       display: flex;
